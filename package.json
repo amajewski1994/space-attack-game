@@ -1,0 +1,14 @@
+{
+  "name": "space-attack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tiny, dependency-free retro browser arcade game.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/engine.test.js",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}

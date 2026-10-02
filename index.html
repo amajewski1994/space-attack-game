@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b100f">
+  <title>Space Attack — The arcade is open.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%238df9bc' d='M7 1h2v4h2v3h3v5H9v-2H7v2H2V8h3V5h2z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Space Attack home"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M7 1h2v4h2v3h3v5H9v-2H7v2H2V8h3V5h2z"/></svg><h1>SPACE ATTACK</h1><span class="edition">ARCADE / 001</span></a>
+      <span class="online"><i></i> ALL SYSTEMS ONLINE</span>
+    </header>
+    <main>
+      <div class="layout">
+        <section class="cabinet" id="cabinet" aria-label="Space Attack arcade game">
+          <div class="game-toolbar"><span><i class="status-dot"></i> <span id="status">STANDING BY</span></span><div><button id="sound" class="icon-button" aria-label="Toggle sound" aria-pressed="true" title="Sound (M)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg><span id="sound-label">SOUND ON</span></button><button id="fullscreen" class="icon-button" aria-label="Enter fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></button></div></div>
+          <div class="screen">
+            <div class="hud"><div><span class="hud-label">1UP / SCORE</span><strong id="score">000000</strong></div><div class="high-score"><span class="hud-label">HI-SCORE</span><strong id="high-score">000000</strong></div><div class="wave-hud"><span class="hud-label">WAVE</span><strong id="wave">01</strong></div></div>
+            <div class="playfield" id="playfield">
+              <canvas id="game" width="720" height="480" aria-label="Space shooter. Move with arrow keys or A and D. Hold Space to fire. P to pause."></canvas>
+              <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                  <span class="small-tag" id="overlay-tag">EARTH'S LAST LINE OF DEFENSE</span>
+                  <div class="hero-ship" id="hero-ship" aria-hidden="true"></div>
+                  <h2 id="overlay-title">READY,<br>PLAYER ONE?</h2>
+                  <p id="overlay-copy">Hold the line. Clear the skies.<br>See how long you can survive.</p>
+                  <button class="primary-button" id="start">START GAME <span>↗</span></button>
+                  <span class="enter-hint" id="enter-hint">OR PRESS <kbd>ENTER</kbd> TO START</span>
+                </div>
+              </div>
+              <div class="wave-banner" id="wave-banner" aria-live="polite"></div>
+            </div>
+            <div class="bottom-hud"><div class="lives"><span class="hud-label">SHIELDS</span><div id="health" aria-label="3 shields remaining"><i></i><i></i><i></i></div><span id="health-text">3 / 3</span></div><span id="sector">SECTOR 01 <span class="muted">/ DEEP SPACE</span></span><button id="pause" class="pause-button" disabled aria-label="Pause game">Ⅱ <span>PAUSE</span></button></div>
+          </div>
+          <div class="cabinet-footer"><span><span class="mint">✦</span> NO COINS NEEDED. JUST COURAGE.</span><span>60 FPS <i class="status-dot"></i></span></div>
+          <div class="touch-controls" aria-label="Touch controls"><button data-key="ArrowLeft" aria-label="Move left">←</button><button data-key="ArrowRight" aria-label="Move right">→</button><button data-key="Space" class="touch-fire">FIRE</button></div>
+        </section>
+        <aside class="sidebar">
+          <section><div class="panel-heading"><span class="section-num">01 /</span><h2>FLIGHT CONTROLS</h2></div><div class="control-row"><span>Move</span><div><kbd>←</kbd> <kbd>→</kbd><em>/</em><kbd>A</kbd> <kbd>D</kbd></div></div><div class="control-row"><span>Fire</span><kbd class="wide-key">SPACE</kbd></div><div class="control-row"><span>Pause</span><kbd>P</kbd></div><div class="control-row"><span>Sound</span><kbd>M</kbd></div><p class="control-tip">Hold fire. Keep moving.</p></section>
+          <section class="field-guide"><div class="panel-heading"><span class="section-num">02 /</span><h2>KNOW YOUR ENEMY</h2></div><div class="enemy-row"><canvas data-sprite="0" width="36" height="27" aria-label="Red scout"></canvas><span>SCOUT</span><strong>100 <small>PTS</small></strong></div><div class="enemy-row"><canvas data-sprite="1" width="36" height="27" aria-label="Green striker"></canvas><span>STRIKER</span><strong>200 <small>PTS</small></strong></div><div class="enemy-row"><canvas data-sprite="2" width="36" height="27" aria-label="Yellow commander"></canvas><span>COMMANDER</span><strong>400 <small>PTS</small></strong></div></section>
+          <section class="briefing"><div class="panel-heading"><span class="section-num">03 /</span><h2>THE MISSION</h2></div><p>Clear the formation. Dodge the dive attacks. Stay alive for the next wave.</p><div class="mission-tag"><i></i> SURVIVAL IS THE OBJECTIVE</div></section>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
