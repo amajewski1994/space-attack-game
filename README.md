@@ -2,21 +2,29 @@
 
 A small retro arcade shooter built with plain HTML, CSS, JavaScript, and Canvas. No build step, external assets, runtime dependencies, or network connection required.
 
-## Play locally
+## Play online
 
-Double-click **index.html** to open it in a modern browser.
+**Live game:** https://amajewski1994.github.io/space-attack-game/
 
-Alternatively, with Node.js installed, run `npm start` and open **http://localhost:3000**. Installing packages is not necessary to play.
+## Run locally
+
+No installation is required.
+
+Download the repository and extract it to a folder on your computer.
+
+Open `index.html` directly in a modern browser.
+
+No package installation is required to play.
 
 ## Controls
 
-| Action | Key |
-| --- | --- |
-| Move left / right | Arrow keys or A / D |
-| Fire continuously | Hold Space |
-| Start / restart / resume | Enter |
-| Pause / resume | P or Escape |
-| Toggle sound | M |
+| Action                   | Key                 |
+| ------------------------ | ------------------- |
+| Move left / right        | Arrow keys or A / D |
+| Fire continuously        | Hold Space          |
+| Start / restart / resume | Enter               |
+| Pause / resume           | P or Escape         |
+| Toggle sound             | M                   |
 
 The buttons also support mouse and keyboard interaction. Touch devices show movement and fire buttons. Switching tabs or leaving the window automatically pauses gameplay.
 
